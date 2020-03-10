@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+        function aciona_onblur(valor){
+            document.getElementById("msg").innerHTML = valor;
+        }
+        </script>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <h2>É acionado quando sai de foco</h2>
+        <div id="msg"></div>
+        <form name="f">
+            <input type="text" onblur="aciona_onblur(this.value)"/>
+            <br/>
+            <select name="z" onblur="aciona_onblur(this.value)">
+                <option>A</option>
+                <option>B</option>
+                <option>C</option>
+            </select>
+        </form>
+    </body>
+</html>
